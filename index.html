@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>LoL Stats</title>
+
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/dc.css"/>
+
+    <style>
+        #monthly-volume-chart g.y {
+            display: none;
+        }
+        .red{
+            color: red;
+		}
+        .orange{
+            color: orange;
+		}
+        .best{
+            color: orange;
+		}
+		.container .table th, .table td {
+		padding: 8px;
+			line-height: 0px;
+		}
+    </style>
+</head>
+<body>
+<div class="container">
+<h2>LoL Stats</h2>
+
+<div class="row">
+    <div id="yearly-bubble-chart" class="dc-chart">
+        <strong>Champion Performance</strong>
+        <a class="reset" href="javascript:yearlyBubbleChart.filterAll();dc.redrawAll();"
+           style="display: none;">reset</a>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+<div class="row">
+    <div id="gain-loss-chart">
+        <strong>Matchs</strong>
+        <a class="reset" href="javascript:gainOrLossChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+        <div class="clearfix"></div>
+    </div>
+
+    <div id="quarter-chart">
+        <strong>Type</strong>
+        <a class="reset" href="javascript:quarterChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+        <div class="clearfix"></div>
+    </div>
+
+    <div id="day-of-week-chart">
+        <strong>Summoner</strong>
+        <a class="reset" href="javascript:dayOfWeekChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+        <div class="clearfix"></div>
+    </div>
+    <div id="monthly-move-chart">
+        <strong>Monthly evolution</strong>
+        <span class="reset" style="display: none;">range: <span class="filter"></span></span>
+        <a class="reset" href="javascript:moveChart.filterAll();dc.redrawAll();"
+           style="display: none;">reset</a>
+
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+<div class="row">
+    <div>
+        <div class="dc-data-count">
+            <span class="filter-count"></span> selected out of <span class="total-count"></span> records | <a
+                href="javascript:dc.filterAll(); dc.renderAll();">Reset All</a> | <span class="red"></span> | <span class="orange"></span>
+        </div>
+    </div>
+    <table class="table table-hover dc-data-table">
+        <thead>
+        <tr class="header">
+            <th><a href="javascript:ggt('gameid');dc.renderAll();">Date</a></th>
+            <th>Summoner</th>
+            <th>Champion</th>
+            <th>Type</th>
+            <th><a href="javascript:ggt('time');dc.renderAll();">Time</a></th>
+            <th><a href="javascript:ggt('win');dc.renderAll();">Win</a></th>
+            <th><a href="javascript:ggt('kda');dc.renderAll();">KDA</a></th>
+            <th><a href="javascript:ggt('kill');dc.renderAll();">Kills</a></th>
+            <th><a href="javascript:ggt('death');dc.renderAll();">Deaths</a></th>
+            <th><a href="javascript:ggt('assist');dc.renderAll();">Assists</a></th>
+            <th><a href="javascript:ggt('mpm');dc.renderAll();">mpm</a></th>
+            <th><a href="javascript:ggt('gpm');dc.renderAll();">gpm</a></th>
+        </tr>
+        </thead>
+    </table>
+</div>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.1/d3.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.7/crossfilter.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/dc/2.0.0-beta.33/dc.min.js"></script>
+<script type="text/javascript" src="js/colorbrewer.js"></script>
+
+<script language="javascript" type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+<script type="text/javascript" src="lol.js"></script>
+</div>
+</body>
+</html>
