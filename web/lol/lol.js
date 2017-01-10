@@ -52,6 +52,9 @@ d3.csv("//www.katagena.com/lol.php?date="+Math.floor((Math.random()*500000)+1), 
     var dateFormat = d3.time.format("%Y-%m-%d");
     var numberFormat = d3.format(".2f");
 
+    if (data === null) {
+        return;
+    }
     data.forEach(function (d) {
         d.dd = dateFormat.parse(d.date);
         d.month = d3.time.month(d.dd); // pre-calculate month for better performance
