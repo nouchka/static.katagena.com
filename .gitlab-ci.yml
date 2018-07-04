@@ -814,6 +814,9 @@ before_script:
   - *auto_devops
 
 build-latest:
+  image: docker:latest
+  services:
+    - docker:dind
   stage: build
   script:
     - docker build --pull --build-arg CI_PROJECT_URL=$CI_PROJECT_URL -t $CI_REGISTRY_IMAGE .
