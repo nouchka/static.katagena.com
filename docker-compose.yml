@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  resume:
+    image: nouchka/static
+    build: .
+    container_name: "static"
+    ports:
+      - "80:80"
