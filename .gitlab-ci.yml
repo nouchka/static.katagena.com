@@ -813,6 +813,12 @@ rollout 100%:
 before_script:
   - *auto_devops
 
+build-latest:
+  stage: build
+  script:
+    - docker build --pull --build-arg CI_PROJECT_URL=$CI_PROJECT_URL -t $CI_REGISTRY_IMAGE .
+    - docker push $CI_REGISTRY_IMAGE
+
 pages:
   stage: production
   image: $CI_REGISTRY_IMAGE
