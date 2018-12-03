@@ -931,6 +931,7 @@ rollout 100%:
 
 before_script:
   - *auto_devops
+
 build-latest:
   image: docker:latest
   services:
