@@ -18,7 +18,7 @@ body{
 </style>
 </head>
 <body>
-<img src="http://www.city.kobe.lg.jp/information/public/online/onehundred-scenes/detail_img/img001_01.png" alt="" width="420" height="460" id="homeImg">
+<img src="img001_01.png" alt="" width="420" height="460" id="homeImg">
 <script>
 function pad(num, size) {
     var s = num+"";
@@ -27,7 +27,7 @@ function pad(num, size) {
 }
 function changeBg(){
 	var number = pad(Math.floor((Math.random() * 100) + 1), 3);
-	document.getElementById("homeImg").src = "http://www.city.kobe.lg.jp/information/public/online/onehundred-scenes/detail_img/img"+number+"_01.png";
+	document.getElementById("homeImg").src = "img"+number+"_01.png";
 }
 var iFrequency = 30000; // expressed in miliseconds
 var myInterval = 0;
