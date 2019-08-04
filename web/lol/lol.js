@@ -47,7 +47,7 @@ var sortSens = true;
 //d3.json("data.json", function(data) {...};
 //jQuery.getJson("data.json", function(data){...});
 //```
-d3.csv("//api.katagena.com/lol/data?date="+Math.floor((Math.random()*500000)+1), function (data) {
+d3.csv("//static.katagena.com/lol/data.csv", function (data) {
     /* since its a csv file we need to format the data a bit */
     var dateFormat = d3.time.format("%Y-%m-%d");
     var numberFormat = d3.format(".2f");
