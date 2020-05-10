@@ -6,4 +6,4 @@ services:
     build: .
     container_name: "static"
     ports:
-      - "80:80"
+      - "8202:80"
