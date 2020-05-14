@@ -4,7 +4,7 @@ LABEL maintainer="Jean-Avit Promis docker@katagena.com"
 LABEL org.label-schema.vcs-url="https://github.com/nouchka/static.katagena.com"
 LABEL version="latest"
 
-COPY web/ /usr/share/nginx/html
+COPY public/ /usr/share/nginx/html
 COPY kobe-fetch.sh /kobe-fetch.sh
 
 RUN apt-get update && \

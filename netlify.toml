@@ -1,2 +1,7 @@
 [build]
-  publish = "web"
+  command = "make publish"
+  publish = "public"
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
