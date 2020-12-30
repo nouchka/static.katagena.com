@@ -3,3 +3,4 @@ static:
 	cp public/index.html static/
 
 publish:
+	mv web/ public/
