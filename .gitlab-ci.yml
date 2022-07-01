@@ -7,6 +7,7 @@ build:
   image: alpine:latest
   script:
     - apk --update add make
+    - ls -al
     - make publish
   artifacts:
     paths:
