@@ -4,9 +4,10 @@ include:
 
 build:
   stage: build
-  image: alpine:latest
+  image: ubuntu:latest
   script:
-    - apk --update add make
+    - apt-get update
+    - apt-get install -y make wget
     - make publish
   artifacts:
     paths:
