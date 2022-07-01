@@ -1,0 +1,3 @@
+include:
+  - project: 'katagena/templates'
+    file: 'ci/global.yml'
