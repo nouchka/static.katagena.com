@@ -1,3 +1,16 @@
 include:
   - project: 'katagena/templates'
     file: 'ci/global.yml'
+
+build:
+  stage: build
+  image: alpine:latest
+  script:
+    - apk --update add make
+    - make publish
+  artifacts:
+    paths:
+    - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == "master"
+    
