@@ -7,11 +7,9 @@ build:
   image: alpine:latest
   script:
     - apk --update add make
-    - ./kobe-fetch.sh
-    - cp -R web/ public/
+    - make publish
   artifacts:
     paths:
     - public
   rules:
     - if: $CI_COMMIT_BRANCH == "master"
-    
