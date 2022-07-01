@@ -7,8 +7,8 @@ build:
   image: alpine:latest
   script:
     - apk --update add make
-    - ls -al
-    - make publish
+    - ./kobe-fetch.sh
+    - cp -R web/ public/
   artifacts:
     paths:
     - public
