@@ -1,3 +1,3 @@
 # static.katagena.com
 
-Static webiste
+Static website
