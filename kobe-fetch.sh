@@ -8,4 +8,4 @@ do
 done
 
 cd ../
-cp .cache/img*.png web/kobe/
+cp .cache/img*.png public/kobe/
